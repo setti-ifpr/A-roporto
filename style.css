@@ -1,0 +1,222 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  color: #1a73e8;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #666;
+  font-style: italic;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #444;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  background: #eee;
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+  font-weight: bold;
+  color: #666;
+  transition: 0.3s;
+}
+
+.tabs button.active {
+  background: white;
+  color: #1a73e8;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #888;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input:focus {
+  border-color: #1a73e8;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.btn-primary {
+  width: 100%;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background: #1557b0;
+}
+
+/* Estilo dos Voos na Lista */
+.voo-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-left: 5px solid #1a73e8;
+  position: relative;
+}
+
+.voo-card.jato { border-left-color: #ff9800; }
+.voo-card.carga { border-left-color: #4caf50; }
+
+.voo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.voo-info h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.voo-info p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+.voo-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-item {
+  text-align: right;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-weight: bold;
+  display: block;
+}
+
+.voo-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.btn-sm:hover { background: #eee; }
+.btn-sm.accent { background: #ff9800; color: white; border: none; }
+.btn-sm.success { background: #4caf50; color: white; border: none; }
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.6rem;
+  background: #eee;
+  padding: 3px 8px;
+  border-radius: 10px;
+  color: #888;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #aaa;
+  padding: 40px;
+}
+
+
