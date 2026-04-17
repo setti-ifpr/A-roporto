@@ -30,7 +30,6 @@ class Passageiro {
     }
 
     /**
-     * Método para atualizar os dados do passageiro caso haja erro de digitação.
      * @param {string} novoNome - O nome corrigido.
      */
     corrigirNome(novoNome) {
@@ -39,5 +38,3 @@ class Passageiro {
     }
 }
 
-// Exporta a classe para ser usada em outros arquivos (Modularização)
-export default Passageiro;

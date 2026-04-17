@@ -1,67 +1,77 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aeroporto Inteligente - POO</title>
-]   <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>✈️ Aeroporto Inteligente</h1>
-        <p>Simulador de Herança em JavaScript Moderno (ES6)</p>
-      </header>
 
-      <main>
-        <!-- Formulário de Cadastro -->
-        <section class="card form-section">
-          <h2>Novo Registro</h2>
-          <div class="tabs">
-            <button id="tab-jato" class="active" onclick="setTipo('jato')">Jato Executivo</button>
-            <button id="tab-carga" onclick="setTipo('carga')">Voo de Carga</button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aeroporto Inteligente - POO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+  <div class="container">
+    <header>
+      <h1>✈️ Aeroporto Inteligente</h1>
+      <p>Simulador de Herança em JavaScript Moderno (ES6)</p>
+    </header>
+
+    <main>
+      <!-- Formulário de Cadastro -->
+      <section class="card form-section">
+        <h2>Novo Registro</h2>
+        <div class="tabs">
+          <button id="tab-jato" class="active" onclick="setTipo('jato')">Jato Executivo</button>
+          <button id="tab-carga" onclick="setTipo('carga')">Voo de Carga</button>
+        </div>
+
+        <div class="form-group">
+          <label>Código do Voo</label>
+          <input type="text" id="codigo" placeholder="Ex: PR-XYZ">
+        </div>
+
+        <div class="row">
           <div class="form-group">
-            <label>Código do Voo</label>
-            <input type="text" id="codigo" placeholder="Ex: PR-XYZ">
+            <label>Origem</label>
+            <input type="text" id="origem" placeholder="Ex: CWB">
           </div>
-
-          <div class="row">
-            <div class="form-group">
-              <label>Origem</label>
-              <input type="text" id="origem" placeholder="Ex: CWB">
-            </div>
-            <div class="form-group">
-              <label>Destino</label>
-              <input type="text" id="destino" placeholder="Ex: GRU">
-            </div>
+          <div class="form-group">
+            <label>Destino</label>
+            <input type="text" id="destino" placeholder="Ex: GRU">
           </div>
+        </div>
 
-          <div id="campo-carga" style="display: none;">
-            <div class="form-group">
-              <label>Capacidade (kg)</label>
-              <input type="number" id="capacidade" value="5000">
-            </div>
+        <div id="campo-carga" style="display: none;">
+          <div class="form-group">
+            <label>Capacidade (kg)</label>
+            <input type="number" id="capacidade" value="5000">
           </div>
+        </div>
 
-          <button class="btn-primary" onclick="adicionarVoo()">Registrar Voo</button>
-        </section>
+        <button class="btn-primary" onclick="adicionarVoo()">Registrar Voo</button>
+      </section>
 
-        <!-- Lista de Voos -->
-        <section class="list-section">
-          <h2>Tráfego Aéreo</h2>
-          <div id="lista-voos">
-            <!-- Os voos aparecerão aqui -->
-            <p class="empty-msg">Nenhum voo registrado.</p>
-          </div>
-        </section>
-      </main>
-
+      <!-- Lista de Voos -->
+      <section class="list-section">
+        <h2>Tráfego Aéreo</h2>
+        <div id="lista-voos">
+          <!-- Os voos aparecerão aqui -->
+          <p class="empty-msg">Nenhum voo registrado.</p>
+        </div>
+      </section>
+    </main>
+    <div class="abastecer">
+      <h2>Abastecimento do Voo</h2>
+      <p id="painelCombustivel">Combustível: 100%</p>
+      <button id="btnGastar">Gastar Combustível (Voar)</button>
+      <button id="btnAbastecerSeguro">Abastecer 10%</button>
     </div>
+  </div>
 
-    <script type="module" src="JS/script.js"></script>
-    <script src="JS/MODELS/passageiro.js"></script>
-  </body>
+
+
+
+
+  <script type="module" src="JS/script.js"></script>
+</body>
+
 </html>
-

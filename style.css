@@ -219,4 +219,42 @@ input:focus {
   padding: 40px;
 }
 
+.abastecer{
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: relative;
+  width: 285px;
+  top: 20px;
+}
 
+.abastecer > #painelCombustivel{
+  text-align: center;
+  color: black;
+}
+
+.abastecer > #btnGastar{
+  width: 100%;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.abastecer > #btnAbastecerSeguro{
+  width: 100%;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}

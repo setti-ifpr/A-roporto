@@ -178,3 +178,44 @@ function renderizarVoos() {
     `;
   }).join('');
 }
+
+class VooSeguro {
+    #codigo;
+    #combustivel;
+
+    constructor(codigoPassado) {
+        this.#codigo = codigoPassado;
+        this.#combustivel = 100; 
+    }
+
+    get lerCombustivel() {
+        return `O tanque do voo ${this.#codigo} está em ${this.#combustivel}%`;
+    }
+
+    set abastecer(quantidade) {
+        if (quantidade < 0) {
+            console.log("Erro de segurança: Não é possível tirar combustível!");
+        } else if (this.#combustivel + quantidade > 100) {
+            console.log("Erro: O tanque vai transbordar! Limite é 100%.");
+        } else {
+            this.#combustivel += quantidade;
+            console.log(`Abastecimento concluído. Novo nível: ${this.#combustivel}%`);
+        }
+    }
+}
+
+let combustivel = 100;
+
+document.getElementById("btnGastar").addEventListener("click", function() {
+  if (combustivel > 0) {
+    combustivel -= 10;
+    document.getElementById("painelCombustivel").textContent = `Combustível: ${combustivel}%`;
+  }
+});
+
+document.getElementById("btnAbastecerSeguro").addEventListener("click", function() {
+  if (combustivel < 100) {
+    combustivel += 10;
+    document.getElementById("painelCombustivel").textContent = `Combustível: ${combustivel}%`;
+  }
+});
