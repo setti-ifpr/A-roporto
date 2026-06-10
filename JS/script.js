@@ -245,3 +245,29 @@ finally {
     console.log("Tentativa de registro finalizada no sistema.");
 }
 
+const listaDeVoos = [
+    { codigo: "G3-100", destino: "São Paulo", status: "Embarque", portao: "01" },
+    { codigo: "LA-200", destino: "Rio de Janeiro", status: "Atrasado", portao: "04" },
+    { codigo: "AD-300", destino: "Campinas", status: "Confirmado", portao: "02" }
+];
+
+const tela = document.getElementById("telaDoAeroporto");
+
+function atualizarPainel() {
+  function go(what) {
+        document.getElementById("goy").innerHTML = what;
+    }
+    function clear() {
+        document.getElementById("goy").innerHTML = "";
+    }
+
+    listaDeVoos.forEach(voo => {
+      const newDiv = document.createElement("div");
+      const list = element.classList;
+      list.add("style.css");
+      document.getElementById("telaDoAeroporto").innerHTML = "Perguntar ao vagner onde está o texto do voo"
+      var filho = div.appendChild("filho");
+    });
+}
+
+atualizarPainel();
