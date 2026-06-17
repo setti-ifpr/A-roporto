@@ -1,4 +1,4 @@
-class Voo {
+/*class Voo {
   constructor(codigo, origem, destino) {
     this.codigo = codigo;
     this.origem = origem;
@@ -18,7 +18,7 @@ class Voo {
     this.altitude = 0;
     this.status = "Pousado";
   }
-}
+}*/
 
 class JatoExecutivo extends Voo {
   constructor(codigo, origem, destino) {
@@ -254,19 +254,18 @@ const listaDeVoos = [
 const tela = document.getElementById("telaDoAeroporto");
 
 function atualizarPainel() {
-  function go(what) {
-        document.getElementById("goy").innerHTML = what;
-    }
-    function clear() {
-        document.getElementById("goy").innerHTML = "";
-    }
-
+  const voosDiv = document.getElementById("telaDoAeroporto")
+  voosDiv.innerHTML = ""
     listaDeVoos.forEach(voo => {
-      const newDiv = document.createElement("div");
-      const list = element.classList;
-      list.add("style.css");
-      document.getElementById("telaDoAeroporto").innerHTML = "Perguntar ao vagner onde está o texto do voo"
-      var filho = div.appendChild("filho");
+      const newDiv = document.createElement("div")
+      newDiv.classList.add("card-voo")
+
+      Object.entries(voo).forEach(data => {
+        newDiv.innerHTML += `<b>${data[0]}</b>: ${data[1]} <br>`
+      })
+
+      voosDiv.appendChild(newDiv)
+
     });
 }
 
@@ -286,3 +285,28 @@ aeroportoCWB.adicionarVooNoRadar(voo2);
 let vooAchado = aeroportoCWB.buscarVoo("LA-200");
 console.log(vooAchado); 
 
+const formulario = document.getElementById("formDespacho");
+const campoCodigo = document.getElementById("inputCodigo");
+const campoDestino = document.getElementById("inputDestino");
+
+  formulario.addEventListener("submit", function(event) {
+    event.preventDefault()
+
+    const codigoDigitado = campoCodigo.value
+    const destinoDigitado = campoDestino.value 
+
+    let novoVoo = {
+        codigo: codigoDigitado,
+        destino: destinoDigitado,
+        status: "Embarque",
+        portao: "01"
+    };
+
+    console.log(novoVoo)
+
+    listaDeVoos.push(novoVoo)
+    atualizarPainel()
+
+    campoCodigo.value = ""
+    campoDestino.value = "" 
+});
