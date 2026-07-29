@@ -1,3 +1,5 @@
+//meu arquivo clima.js
+// 
 const urlSatelite = "https://api.open-meteo.com/v1/forecast?latitude=-24.41&longitude=-53.52&current_weather=true"
 
 async function climaAtual() {
