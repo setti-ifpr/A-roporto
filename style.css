@@ -275,3 +275,10 @@ input:focus {
   padding: 5px 10px; 
   cursor: pointer;
 }
+
+#botaoAlerta{
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+  background-color: red;
+}
